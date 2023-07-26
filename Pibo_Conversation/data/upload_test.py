@@ -10,8 +10,7 @@ from google.auth.transport.requests import Request
 # 권한 인증 및 토큰 확인
 SCOPES = ['https://www.googleapis.com/auth/drive',
           'https://www.googleapis.com/auth/drive.file',
-          'https://www.googleapis.com/auth/drive.metadata',
-          'https://www.googleapis.com/auth/calendar.readonly']
+          'https://www.googleapis.com/auth/drive.metadata']
 creds = None
 
 # 이미 발급받은 Token이 있을 때
@@ -19,7 +18,7 @@ if os.path.exists('token.pickle'):
    with open('token.pickle', 'rb') as token:
        creds = pickle.load(token)
 
-## 최초 1회 실행
+# # 최초 1회 실행
 # # 발급받은 토큰이 없거나 AccessToken이 만료되었을 때
 # if not creds or not creds.valid:
 #    if creds and creds.expired and creds.refresh_token:
@@ -39,9 +38,9 @@ def drive_upload(filepath, filename):
    # 특정 폴더에 업로드 예제
    request_body = {
       'name': filename, # 파일 명 정보
-      'parents': ['1oEzexhKq2PQS6icXXgPPdQBbZlA0SVrh'] # 부모가 될 폴더의 ID. 즉 업로드할 폴더 위치
+      'parents': ['1Il6CBNjmH9u-ldCyVG1WEteFbW--aItR'] # 부모가 될 폴더의 ID. 즉 업로드할 폴더 위치
    }
-   media = MediaFileUpload({filepath}/{filename},resumable=True)
+   media = MediaFileUpload(f'{filepath}/{filename}',resumable=True)
    file = service.files().create(body=request_body,media_body=media,fields='id').execute()
 
    print("Upload Success, File ID:",file.get('id'))
