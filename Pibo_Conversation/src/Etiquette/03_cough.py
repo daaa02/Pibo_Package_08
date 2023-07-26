@@ -53,8 +53,6 @@ class Etiquette():
                 
         
     def Cough(self):
-        gss.write_sheet(name=self.user_name, today=today_start, activities=filename)
-        
         cm.tts(bhv="do_suggestion_L", string=f"2번 카드를 파이보에게 보여줘!")
         
         while True:         
@@ -195,7 +193,7 @@ class Etiquette():
 
         # 5. 활동 완료 기록
         today_end = datetime.now().strftime('%y%m%d_%H%M')        
-        gss.write_sheet(name=self.user_name, today=today_end, activities=filename)
+        gss.write_sheet(name=self.user_name, today=f'(3)_{today_end}', activities=filename)
         
 
 
