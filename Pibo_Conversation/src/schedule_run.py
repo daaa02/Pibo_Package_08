@@ -117,8 +117,8 @@ class RunSchedule():
                     self.act = f'Pibo_Conversation/src/Roleplay/{rand}.py'
         
         # 마지막 활동은 헤어짐 시나리오: 얘 끝나고 밑에 다음에 ~ 안나오게 해야함
-        if self.completion == 10:
-            self.act = f'Pibo_Conversation/src/goodbye.py'           
+        # if self.completion == 10:
+        #     self.act = f'Pibo_Conversation/src/goodbye.py'           
         
         folder = "/home/pi/UserData"
         today = datetime.now().strftime('%m%d_%H%M')
