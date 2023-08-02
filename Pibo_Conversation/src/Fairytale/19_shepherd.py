@@ -153,7 +153,7 @@ class Fairytale():
         if answer[0][0] != "negative" and answer[0][0] != "positive": # if answer[0][0] == "neutral":
             cm.tts(bhv="do_joy_A", string=f"{wm.word(self.user_name, 0)}랑 노는 건 정말 재미있어.")
             self.score = [0.0, -0.25, 0.0, 0.0]
-       
+        
         
         cwp.writerow([today, filename, self.score[0], self.score[1], self.score[2],self.score[3]])
 
@@ -173,7 +173,7 @@ class Fairytale():
         cwc.writerow(['%Misrecognitions', ])
 
         # 5. 활동 완료 기록
-        gss.write_sheet(name=self.user_name, today=f'(1)_{today}', activities=filename)
+        gss.write_sheet(name=self.user_name, today=today, activities=filename)
 
 
 
