@@ -170,7 +170,7 @@ def speech_to_text(timeout=10):
     # for a list of supported languages.
     language_code = 'ko-KR'  # a BCP-47 language tag
 
-    service_account.Credentials.from_service_account_file("/home/pi/dayoung-123-1e6969392f38.json")
+    service_account.Credentials.from_service_account_file("/home/pi/stt-test-000-0226dec785df.json")
     client = speech.SpeechClient()
     config = speech.RecognitionConfig(
         encoding=speech.RecognitionConfig.AudioEncoding.LINEAR16,
