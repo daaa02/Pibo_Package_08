@@ -57,7 +57,7 @@ class RunSchedule():
             self.act = f'Pibo_Conversation/src/greeting.py'
         
         if 1 <= self.completion <= 8:
-            fix = {1:'Pibo_Conversation/src/Fairytale/19_shepherd.py', 2:'Pibo_Conversation/src/Roleplay/02_strong.py',
+            fix = {1:'Pibo_Conversation/src/Etiquette/03_cough.py', 2:'Pibo_Play/src/Com/com_4.py',
                    3:'Pibo_Conversation/src/Solution/01_badword.py', 4:'Pibo_Play/src/Com/com_4.py', 5:'Pibo_Play/src/Soc/soc_6.py',
                    6:'Pibo_Conversation/src/Etiquette/03_cough.py', 7:'Pibo_Play/src/Cog/cog_1.py', 8:'Pibo_Play/src/Mus/mus_11.py'}   
             self.act = fix.get(self.completion)
