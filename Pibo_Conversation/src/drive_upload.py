@@ -26,7 +26,7 @@ def drive_upload(filepath, filename):
    #    if creds and creds.expired and creds.refresh_token:
    #        creds.refresh(Request())
    #    else:
-   #        flow = InstalledAppFlow.from_client_secrets_file('/home/pi/client_secret_451979961046-m9ams7bffqtgko7m2jmb8e1aa3d5f1u8.apps.googleusercontent.com.json', SCOPES)
+   #        flow = InstalledAppFlow.from_client_secrets_file('/home/pi/client_secret_519279964839-v4hs0a2qie1o8ampg2fqpdt53t1tbqg5.apps.googleusercontent.com.json', SCOPES)
    #        creds = flow.run_local_server(port=0)
    #    # 현재 토큰 정보를 저장
    #    with open('token.pickle', 'wb') as token:
