@@ -63,7 +63,7 @@ class Com():
         cwc.writerow(['pibo', pibo])
         
         while True:
-            answer = cm.responses_proc(re_q="do_suggestion_S", re_bhv="한번 따라해봐! 우리는 춤을 추는 유령이에요~")
+            answer = cm.responses_proc(re_bhv="do_suggestion_S", re_q="한번 따라해봐! 우리는 춤을 추는 유령이에요~")
             cwc.writerow(['user', answer[0][1], answer[1]])
             self.reject.append(answer[1])
             
